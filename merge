@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# base functions
+echo -e "eraseflash\n\n\n" > bitclock.fs
+echo -e "compiletoflash\n" >> bitclock.fs
+cat utils.fs		>> bitclock.fs
+cat pll.fs		>> bitclock.fs
+cat delay.fs		>> bitclock.fs
+cat io.fs		>> bitclock.fs
+cat spi.fs		>> bitclock.fs
+cat ws2812.fs		>> bitclock.fs
+echo -e "\ncornerstone cold\n" >> bitclock.fs
+cat clock.fs		>> bitclock.fs
+echo -e "\ncornerstone warm\n" >> bitclock.fs
